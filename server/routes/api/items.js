@@ -43,7 +43,7 @@ router.put('/:id', async (req, res) => {
 
 async function loadItemsCollection() {
     const client = await mongodb.MongoClient.connect
-    (process.env.MONGO_API, {useNewUrlParser: true})
+    ('mongodb://dragos:pass12@ds159293.mlab.com:59293/confly', {useNewUrlParser: true})
     return client.db(process.env.MONGO_DB_NAME).collection('items')
 }
 
